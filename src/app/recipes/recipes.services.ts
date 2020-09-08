@@ -12,7 +12,7 @@ export class RecipeService {
         new Recipe('Tasty Schnitzel',
             'A super-tasty Scnitzel - just awesome!',
             // tslint:disable-next-line: max-line-length
-            'https://v1.nitrocdn.com/eSLhakvQipAhEWtksvxrnpAZbKWwysTe/assets/static/optimized/rev-744f298/wp-content/uploads/2019/10/pork-schnitzel-3-1170x617.jpg',
+            'https://thomassixt.de/wp-content/uploads/2016/07/Wiener-Schnitzel-Original-1024x682.jpg',
             [
                 new Ingredient('Meat', 1),
                 new Ingredient('French Fries', 20)
@@ -29,6 +29,10 @@ export class RecipeService {
 
     getRecipes() {
         return this.recipes.slice();
+    }
+
+    getRecipe(index: number) {
+        return this.recipes[index];
     }
 
     addIngredientsToShoppingList(ingredients: Ingredient[]) {
